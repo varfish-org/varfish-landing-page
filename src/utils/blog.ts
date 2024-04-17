@@ -1,7 +1,7 @@
 import type { PaginateFunction } from 'astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import type { Post, Taxonomy } from '~/types';
+import type { Post, MetaData } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
@@ -91,7 +91,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
 
     draft: draft,
 
-    metadata,
+    metadata: metadata as MetaData,
 
     Content: Content,
     // or 'content' in case you consume from API
