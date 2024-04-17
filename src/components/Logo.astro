@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import { SITE } from 'astrowind:config';
+
+import logoImageBright from '../assets/images/logo_navbar.png';
+import logoImage from '../assets/images/logo_navbar_black.png';
+---
+
+<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+  <Image class="inline -mt-1 mr-2 dark:hidden" src={logoImage} alt="VarFish logo" width="28" height="28" />
+  <Image class="hidden -mt-1 mr-2 dark:inline" src={logoImageBright} alt="VarFish logo" width="28" height="28" />
+  {SITE?.name}
+</span>
