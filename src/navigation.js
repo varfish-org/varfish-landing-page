@@ -40,6 +40,7 @@ export const headerData = {
 };
 
 export const footerData = {
+  links: [],
   // links: [
   //   {
   //     title: 'Product',
