@@ -5,10 +5,16 @@ import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import TeamWidget from '~/components/widgets/Team.jsx';
+
 
 import logoCharite from '../assets/images/logo_charite.svg';
 import logoAachen from '../assets/images/logo_aachen.svg';
 import logoUKB from '../assets/images/logo_ukb.png';
+
+import profileEinicke from '../assets/images/profile_leinicke.jpg';
+import profileHoltgrewe from '../assets/images/profile_mholtgrewe.jpg';
+import profileZhao from '../assets/images/profile_mzhao.jpg';
 
 const metadata = {
   title: 'VarFish - Genome Interpretation',
@@ -42,12 +48,69 @@ const metadata = {
 
   <Features2
     title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    subtitle="We are an experienced team of clinical geneticists at Charité - Universitätsmedizin Berlin and bioinformaticians at Berlin Institute of Health."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <section>
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+            <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our team</h2>
+            <!-- <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Meet our team</p>
+            -->
+          </div>
+
+  <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+  <TeamWidget members={[
+    {
+      name: 'Lara Einicke',
+      nameLink: '#',
+      title: 'Clinical Geneticist',
+      avatar: profileEinicke.src,
+      social: {
+        // website: '#',
+        // twitter: '#',
+        // instagram: '#',
+        // facebook: '#',
+        linkedin: 'https://www.linkedin.com/in/lara-einicke-4335092b0/',
+        github: 'https://github.com/einicke',
+      },
+    },
+    {
+      name: 'Manuel Holtgrewe',
+      nameLink: null,
+      title: 'Bioinformatician',
+      avatar: profileHoltgrewe.src,
+      social: {
+        // website: '#',
+        // twitter: '#',
+        // instagram: '#',
+        // facebook: '#',
+        linkedin: 'https://www.linkedin.com/in/manuel-holtgrewe/',
+        github: 'https://github.com/holtgrewe',
+      },
+    },
+    {
+      name: 'Max Xiaohang Zhao',
+      nameLink: null,
+      title: 'Clinical Geneticist',
+      avatar: profileZhao.src,
+      social: {
+        // website: '#',
+        // twitter: '#',
+        // instagram: '#',
+        // facebook: '#',
+        linkedin: 'linkedin.com/in/max-xiaohang-zhao-227428152',
+        github: 'https://github.com/xiamaz',
+      },
+    },
+  ]} />
+  </div>
+  </div>
+  </section>
 
   <Brands
     title="Partnerships & Collaborations"
@@ -71,26 +134,21 @@ const metadata = {
 
   <Steps2
     title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+    subtitle="Interested or having questions? Feel free to contact us."
     callToAction={{
       text: 'Contact us',
-      href: '/',
+      href: 'mailto:info@varfish.de',
     }}
     items={[
       {
         title: 'Email us',
-        description: 'contact@support.com',
+        description: '<a href="mailto:info@varfish.de">info@varfish.de</a>',
         icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
+        title: 'Follow us on GitHub',
+        description: '<a href="https://github.com/varfish-org/varfish-server">github.com/varfish-org/varfish-server</a>',
+        icon: 'tabler:brand-github-filled',
       },
     ]}
   />
