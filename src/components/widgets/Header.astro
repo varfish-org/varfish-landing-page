@@ -9,6 +9,10 @@ import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash, getAsset } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
+import dhaLogoBIH from '~/assets/images/dhalogo_bih2.svg';
+import dhaLogoCharite from '~/assets/images/dhalogo_charite.svg';
+import dhaLogoDHA from '~/assets/images/dhalogo_dha.svg';
+
 interface Link {
   text?: string;
   href?: string;
@@ -61,12 +65,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   <div
     class:list={[
       'relative text-default py-3 px-3 md:px-6 mx-auto w-full',
+      'md:flex md:justify-between',
       {
         'md:flex md:justify-between': position !== 'center',
       },
-      {
-        'md:grid md:grid-cols-3 md:items-center': position === 'center',
-      },
+      // {
+      //   'md:grid md:grid-cols-3 md:items-center': position === 'center',
+      // },
       {
         'max-w-7xl': !isFullWidth,
       },
@@ -80,6 +85,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         <ToggleMenu />
       </div>
     </div>
+    <!-- 
+
     <nav
       class="items-center w-full md:w-auto hidden md:flex md:mx-5 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center"
       aria-label="Main navigation"
@@ -128,6 +135,15 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         }
       </ul>
     </nav>
+    -->
+      <div class="items-center flex flex-row w-28 gap-x-2">
+        <!--
+          These are mandatory DHA logos
+         -->
+        <img width={dhaLogoCharite.width} height={dhaLogoCharite.height} src={dhaLogoCharite.src} alt="Logo Charité" />
+        <img width={dhaLogoDHA.width} height={dhaLogoDHA.height} src={dhaLogoDHA.src} alt="Logo Digital Health Accelerator at BIH" />
+        <img width={dhaLogoBIH.width} height={dhaLogoBIH.height} src={dhaLogoBIH.src} alt="Logo Berlin Institute of Health at Charité" />
+      </div>
     <div
       class:list={[
         { 'ml-auto rtl:ml-0 rtl:mr-auto': position === 'left' },

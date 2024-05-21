@@ -12,9 +12,10 @@ import logoCharite from '../assets/images/logo_charite.svg';
 import logoAachen from '../assets/images/logo_aachen.svg';
 import logoUKB from '../assets/images/logo_ukb.png';
 
-import profileEinicke from '../assets/images/profile_leinicke.jpg';
-import profileHoltgrewe from '../assets/images/profile_mholtgrewe.jpg';
-import profileZhao from '../assets/images/profile_mzhao.jpg';
+import profileEinicke from '../assets/images/profile_leinicke2.jpg';
+import profileHoltgrewe from '../assets/images/profile_mholtgrewe.jpeg';
+import profileZhao from '../assets/images/profile_mzhao2.jpg';
+import profileStolpe from '../assets/images/profile_ostolpe.jpeg';
 
 const metadata = {
   title: 'VarFish - Genome Interpretation',
@@ -30,7 +31,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Test online',
-        href: 'https://varfish-kiosk.bihealth.org/',
+        href: 'https://varfish-ext.cubi.bihealth.org/',
         target: '_blank',
         icon: 'tabler:player-play-filled',
       },
@@ -63,12 +64,12 @@ const metadata = {
             -->
           </div>
 
-  <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+  <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
   <TeamWidget members={[
     {
       name: 'Lara Einicke',
       nameLink: '#',
-      title: 'Clinical Geneticist',
+      title: 'Physician',
       avatar: profileEinicke.src,
       social: {
         // website: '#',
@@ -80,9 +81,23 @@ const metadata = {
       },
     },
     {
+      name: 'Max Xiaohang Zhao',
+      nameLink: null,
+      title: 'Computer Scientist & Physician',
+      avatar: profileZhao.src,
+      social: {
+        // website: '#',
+        // twitter: '#',
+        // instagram: '#',
+        // facebook: '#',
+        linkedin: 'linkedin.com/in/max-xiaohang-zhao-227428152',
+        github: 'https://github.com/xiamaz',
+      },
+    },
+    {
       name: 'Manuel Holtgrewe',
       nameLink: null,
-      title: 'Bioinformatician',
+      title: 'Bioinformatician & Software Engineer',
       avatar: profileHoltgrewe.src,
       social: {
         // website: '#',
@@ -94,17 +109,17 @@ const metadata = {
       },
     },
     {
-      name: 'Max Xiaohang Zhao',
+      name: 'Oliver Stolpe',
       nameLink: null,
-      title: 'Clinical Geneticist',
-      avatar: profileZhao.src,
+      title: 'Software engineer',
+      avatar: profileStolpe.src,
       social: {
         // website: '#',
         // twitter: '#',
         // instagram: '#',
         // facebook: '#',
-        linkedin: 'linkedin.com/in/max-xiaohang-zhao-227428152',
-        github: 'https://github.com/xiamaz',
+        linkedin: 'https://www.linkedin.com/in/oliver-stolpe-61809766/',
+        github: 'https://github.com/stolpeo',
       },
     },
   ]} />
