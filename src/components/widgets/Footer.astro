@@ -3,6 +3,10 @@ import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
 
+import dhaLogoBIH from '~/assets/images/dhalogo_bih.svg';
+import dhaLogoCharite from '~/assets/images/dhalogo_charite.svg';
+import dhaLogoDHA from '~/assets/images/dhalogo_dha.svg';
+
 interface Link {
   text?: string;
   href?: string;
@@ -71,6 +75,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           </div>
         ))
       }
+
     </div>
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       {
@@ -93,6 +98,17 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           ''
         )
       }
+      <div class="w-full">
+        <div class="items-center flex flex-row w-36 gap-x-2">
+          <!--
+            These are mandatory DHA logos
+           -->
+          <img width={dhaLogoCharite.width} height={dhaLogoCharite.height} src={dhaLogoCharite.src} alt="Logo Charité" />
+          <img width={dhaLogoDHA.width} height={dhaLogoDHA.height} src={dhaLogoDHA.src} alt="Logo Digital Health Accelerator at BIH" />
+          <img width={dhaLogoBIH.width} height={dhaLogoBIH.height} src={dhaLogoBIH.src} alt="Logo Berlin Institute of Health at Charité" />
+        </div>
+
+      </div>
 
       <div class="text-sm mr-4 dark:text-muted">
         <Fragment set:html={footNote} />

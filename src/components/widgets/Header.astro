@@ -81,9 +81,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
-      <div class="flex items-center md:hidden">
-        <ToggleMenu />
-      </div>
     </div>
     <!-- 
 
@@ -136,14 +133,14 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       </ul>
     </nav>
     -->
-      <div class="items-center flex flex-row w-28 gap-x-2">
-        <!--
-          These are mandatory DHA logos
-         -->
+    <!-- 
+
+      <div class="items-center flex flex-row w-16 lg:w-28 gap-x-2">
         <img width={dhaLogoCharite.width} height={dhaLogoCharite.height} src={dhaLogoCharite.src} alt="Logo Charité" />
         <img width={dhaLogoDHA.width} height={dhaLogoDHA.height} src={dhaLogoDHA.src} alt="Logo Digital Health Accelerator at BIH" />
         <img width={dhaLogoBIH.width} height={dhaLogoBIH.height} src={dhaLogoBIH.src} alt="Logo Berlin Institute of Health at Charité" />
       </div>
+    -->
     <div
       class:list={[
         { 'ml-auto rtl:ml-0 rtl:mr-auto': position === 'left' },
