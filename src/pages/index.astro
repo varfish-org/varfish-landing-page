@@ -4,7 +4,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import TeamWidget from '~/components/widgets/Team.jsx';
 
 
@@ -35,26 +38,58 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:player-play-filled',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Contact us', href: 'mailto:info@varfish.de', icon: 'tabler:mail' },
     ]}
   >
     <Fragment slot="title">
-      Interpret <span class="text-accent dark:text-white highlight">whole-genome data</span> with confidence
+      Interpret <span class="text-accent dark:text-white highlight">whole-genome data</span> more efficiently
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="font-semibold">VarFish</span> is an open-source, customizable and production-ready variant interpretation software for whole-exome, whole-genome and long read data.
+      <span class="font-semibold">VarFish</span> is the open analysis platform for genetic data.
     </Fragment>
   </Hero>
 
-  <Features2
-    title="About us"
-    subtitle="We are an experienced team of clinical geneticists at Charité - Universitätsmedizin Berlin and bioinformaticians at Berlin Institute of Health."
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <Features3
+    id="mission"
+    title="Interpretation has become a bottleneck in diagnosing genetic disorders"
+    subtitle=""
+    tagline="Our mission"
+    columns={2}
+    items={[
+      {
+        title: 'Over 250 million people are affected by a genetic disorder world-wide',
+        description: `Even though individually rare, over 6000 genetic disorders exist. In sum, a highly significant portion of the global population is affected. Diagnosis and treatment is difficult and often very costly.`,
+        icon: 'tabler:world',
+      },
+      {
+        title: '60% of cases remain unsolved',
+        description:
+          'Even with the latest sequencing technologies, the share of cases that are unsolved remains high.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Interpreting whole genome data is still highly manual and time intensive',
+        description: 'Just working up a single whole-genome sequenced case can take a clinical geneticst over 12 hours. Interpreting invididual variants, creating board presentations, report creation and downstream data management are often still highly manual and many tasks need to be performed manually.',
+        icon: 'tabler:clock-12',
+      },
+      {
+        title: 'Collaboration often falls short',
+        description: `Solving the most difficult cases often requires high-quality data to be shared between individual institutions on their patients. Since this process is not well-integrated into current software, the quality and extent of data shared remains a major challenge for many clinics and laboratories involed in rare disease diagnositcs.`,
+        icon: 'tabler:share-off',
+      },
+    ]}
+  />
+
+  <Stats
+    title="We are already in successful use"
+    subtitle="VarFish is already in use at multiple universities and our tools have been extensively used in clinical research for rare disease."
+    stats={[
+      { title: 'University Hospitals', amount: '4' },
+      { title: 'Cases Analyzed', amount: '>3000' },
+      { title: 'Scientific Publications', amount: '21' },
+    ]}
+  />
 
   <section>
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
@@ -62,6 +97,9 @@ const metadata = {
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our team</h2>
             <!-- <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Meet our team</p>
             -->
+            <p class="mt-4 text-muted text-xl">
+              Our team consists of both experienced software engineers and physicians with expertise in whole genome sequencing and rare disease diagnostics.
+            </p>
           </div>
 
   <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
@@ -127,6 +165,35 @@ const metadata = {
   </div>
   </section>
 
+  <Features2
+    title="We want to shape the future of rare disease diagnostics"
+    subtitle="Our goal is to solve the long tail of unsolved patients with a rare genetic disorder. This requires rapid implementation of state-of-the-art technologies, including novel sequencing technologies, AI-based methods and the latest guidelines and recommendations. In addition, we will require much stronger international collaboration in order to increase our capabilities to match patients with undiagnosed disorders."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    title="Join us in our journey to transform genome diagnostics."
+    subtitle="We are looking for experienced product managers, web developers and software engineers, if you love open-source and working on software that really makes a difference, you will feel right at home with us."
+    actions={[{
+      variant:"primary",
+      text: 'Contact us',
+      href: 'mailto:info@varfish.de',
+      icon: 'tabler:mail-filled',
+    },
+    {
+      variant:"secondary",
+      text: 'Follow our GitHub',
+      href: 'https://github.com/varfish-org/varfish-server',
+      icon: 'tabler:brand-github-filled',
+    },
+    
+    ]}
+  />
+
+  <!-- 
   <Brands
     title="Partnerships & Collaborations"
     subtitle="At VarFish, we believe in open science and collaboration."
@@ -147,12 +214,15 @@ const metadata = {
     ]}
   />
 
+  -->
+
   <Steps2
     title="Reach out to us"
     subtitle="Interested or having questions? Feel free to contact us."
     callToAction={{
-      text: 'Contact us',
-      href: 'mailto:info@varfish.de',
+      text: 'Test VarFish',
+      href: 'https://varfish-ext.cubi.bihealth.org',
+      icon: 'tabler:flask'
     }}
     items={[
       {
