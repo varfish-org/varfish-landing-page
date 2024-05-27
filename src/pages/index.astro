@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -14,6 +15,7 @@ import TeamWidget from '~/components/widgets/Team.jsx';
 import logoCharite from '../assets/images/logo_charite.svg';
 import logoAachen from '../assets/images/logo_aachen.svg';
 import logoUKB from '../assets/images/logo_ukb.png';
+import screenshotVarfish from '../assets/images/varfish_screenshot.webp'
 
 import profileEinicke from '../assets/images/profile_leinicke2.jpg';
 import profileHoltgrewe from '../assets/images/profile_mholtgrewe.jpeg';
@@ -39,7 +41,8 @@ const metadata = {
         icon: 'tabler:player-play-filled',
       },
       { text: 'Contact us', href: 'mailto:info@varfish.de', icon: 'tabler:mail' },
-    ]}
+    ]},
+    image={{src: screenshotVarfish.src, alt: "Varfish Screenshot"}}
   >
     <Fragment slot="title">
       Interpret <span class="text-accent dark:text-white highlight">whole-genome data</span> more efficiently
@@ -170,7 +173,7 @@ const metadata = {
     subtitle="Our goal is to solve the long tail of unsolved patients with a rare genetic disorder. This requires rapid implementation of state-of-the-art technologies, including novel sequencing technologies, AI-based methods and the latest guidelines and recommendations. In addition, we will require much stronger international collaboration in order to increase our capabilities to match patients with undiagnosed disorders."
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
