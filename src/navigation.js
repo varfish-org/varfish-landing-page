@@ -90,8 +90,8 @@ export const footerData = {
   //   },
   // ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    // { text: 'Terms', href: getPermalink('/terms') },
+    { text: 'Privacy Policy', href: "https://www.charite.de/en/service/data_protection/" },
     { text: 'Impressum', href: getPermalink('/impressum') },
   ],
   footNote: "VarFish is being funded by the Digital Health Accelerator program of the BIH.",
